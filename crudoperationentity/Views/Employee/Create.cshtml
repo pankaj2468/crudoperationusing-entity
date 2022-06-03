@@ -1,0 +1,61 @@
+﻿@model crudoperationentity.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<script>
+    $(document).ready(function () {
+        $('#Employee').dataTable();
+    });
+</script*@>
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title"><h4>Add Employee</h4></div>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create" asp-controller="Employee" method="post">
+
+                    <div class="form-group">
+                        <label>Employee Name</label>
+                        <input type="text" class="form-control" asp-for="Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Employee Age</label>
+                        <input type="text" class="form-control" asp-for="Age" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Employee Salary</label>
+                        <input type="text" class="form-control" asp-for="Salary" />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Employee Address</label>
+                        <input type="text" class="form-control" asp-for="Address" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Employee Gender</label>
+                        <select asp-for="Gender" class="form-control">
+                            <option value="">---select---</option>
+                            <option value="Male">male</option>
+                            <option value="Female">female</option>
+                            <option value="transgender">transgender</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-outline-success" value="Register" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
